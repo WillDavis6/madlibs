@@ -1,3 +1,4 @@
 from flask import Flask, request, render_template
 
-@app = (__main__)
+app = Flask(__name__)
+app.config['SECRET_KEY'] = "secret"
