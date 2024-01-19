@@ -19,7 +19,10 @@ def ask_quesiton():
 @app.route("/story")
 def show_story():
     """Show story results"""
-
+    #if search in database:
+    flash("Traveler Generated", 'success')
+    #else 
+    flash("Part not in database", 'error')
     text = story.generate(request.args)
 
     return render_template("story.html", text=text)
