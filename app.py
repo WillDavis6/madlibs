@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, request
 from flask_debugtoolbar import DebugToolbarExtension
 from stories import story
+from flask import flash, get_flashed_messages
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "secret"
